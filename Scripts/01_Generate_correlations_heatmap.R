@@ -52,7 +52,7 @@ statistics_separator = function(estimado, medido, separador) {
   
 }
 
-all = fread('Data/all_data.csv')[,-1]
+all = fread('Data/Matchups.csv')[,-1]
 
 all$OWT.Class = as.character(all$OWT.Class)
 all$Class = as.character(all$Class)
