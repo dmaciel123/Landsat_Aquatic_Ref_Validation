@@ -5,6 +5,7 @@ This repository hosts the dataset and codes used to generate and evaluate accura
 
 Figure 01 demonstrate the main results (reflectance validation). 
 
+![rrs_val_log3](https://user-images.githubusercontent.com/36137468/231843147-46d3a30c-1b5e-4afc-a419-963a3dcf98db.jpeg)
 
 
 
