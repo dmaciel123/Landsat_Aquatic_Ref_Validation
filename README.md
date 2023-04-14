@@ -31,3 +31,4 @@ The time-series was obtained using the Google Earth Engine platform and the scri
 
 More information about the time-series is provided in the Supplementary Material of Maciel et al. (2023) publication. 
 
+
