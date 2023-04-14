@@ -3,7 +3,7 @@
 require(data.table)
 require(dplyr)
 require(ggplot2)
-source("Scripts/figuras.R")
+source("Scripts/Figures.R")
 require(Metrics)
 require(scales)
 require(ggpubr)
