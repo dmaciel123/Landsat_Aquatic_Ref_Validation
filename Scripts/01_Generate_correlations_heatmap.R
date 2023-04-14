@@ -54,20 +54,25 @@ statistics_separator = function(estimado, medido, separador) {
 
 all = fread('Data/Matchups.csv')[,-1]
 
-all$OWT.Class = as.character(all$OWT.Class)
 all$Class = as.character(all$Class)
 
+# Select id vars
+id_vars = select(all, !((contains('insitu') | contains('satellite')))) %>% colnames()
 
-insitu = all[,2:6] %>% melt()
-sat = all[,-c(1:6)] %>% melt()
+insitu = select(all, contains("insitu")) %>% melt()
+sat =  select(all, !contains("insitu")) %>% melt(id = id_vars) 
 
+## Remove the "satellite word from the collumn variable
 
+sat$variable = gsub(x = sat$variable, pattern = "_satellite", replacement = '')
 sat$sensor_band = paste(sat$sensor, sat$variable)
+
 
 final = sat
 final$insitu = insitu$value
 
-final[final$sensor == 'TM' & final$variable == 'CA' , 'insitu'] = 0.1
+
+final[final$sensor == 'TM' & final$variable == 'CA', 'insitu'] = 0.1
 final[final$sensor == 'ETM+' & final$variable == 'CA', 'insitu'] = 0.1
 
 selection = final
@@ -161,11 +166,13 @@ selection2 = transform(selection2,
 
 
 selection3 = filter(selection2, variable == 'CA' & sensor == 'OLI')
+
 coastal = plot_surface_reflectance_log(insitu = selection3$insitu*pi,
                                        sat = selection3$value*pi, 
                                        colors = 'blue', 
                                        separador = selection3$sensor_band,
-                                       METODO = '', campanha = selection3$variable, max = 0.2, size_axis = 35, size_txt = 10)
+                                       METODO = '', campanha = selection3$variable, 
+                                       max = 0.2, size_axis = 35, size_txt = 10)
 
 
 selection3 = filter(selection2, variable == 'Blue' & sensor != 'OLI2')
