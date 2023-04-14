@@ -1,7 +1,11 @@
 # Validity of the Landsat surface reflectance archive for aquatic science: Implications for cloud-based analysis
 
-This repository hosts the dataset and codes used to generate and evaluate accuracy of Landsat Collection 2 Level 2 products. For that, R-Code is provided to calculate Landsat accuracy 
-based on in-situ water reflectance simulated to Landsat-5/TM, Landsat-7/ETM+, Landsat-8/OLI and Landsat-9/OLI-2. 
+This repository hosts the dataset and codes used to generate and evaluate accuracy of Landsat Collection 2 Level 2 products. The study aimed to validate de reflectance products of Level-2 Collection-2 for aquatic applications. 
+
+For reproductibility purposes, R-Code is provided to calculate Landsat accuracy based on in-situ water reflectance simulated to Landsat-5/TM, Landsat-7/ETM+, Landsat-8/OLI and Landsat-9/OLI-2. 
+
+The dataset is based on GLORIA (Lehmann et al. (2023), Augmented GLORIA (Pahlevan et al. (2021) and LabISA (Maciel et al. 2021 and Barbosa et al. 2015)). 
+
 
 For reproduction of this study, users should first clone de GitHub repository and execute the R scripts. A .CSV file (Matchups.csv) is provided with the in-situ simulated reflectance and Landsat extracted data.
 
