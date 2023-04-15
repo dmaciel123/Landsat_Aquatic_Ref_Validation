@@ -15,7 +15,7 @@ The compilation of this dataset is based on three different data sources.
 
 # Figures and statistical analysis
 
-For reproduction of this study, users should first clone de GitHub repository and execute the R scripts. A .CSV file (Matchups.csv) is provided with the in-situ simulated reflectance and Landsat extracted data. A detailed description of Metadata is available in the file Metadata-LO-Letters-data.docx.
+For reproduction of this study, users should first clone de GitHub repository and execute the R scripts. A .CSV file (Matchups.csv) is provided with the in-situ simulated reflectance and Landsat extracted data. A detailed description of Metadata is available in the file [Metadata-LO-Letters-data.docx](https://github.com/dmaciel123/Landsat_Aquatic_Ref_Validation/blob/master/Metadata-LO-Letters-data.docx).
 
 The script "01_Generate_correlations_heatmap.R" run the statistical analysis and figures plot for the Figure 2 of the main manuscript and for the Figure S2 of the Supplementary Material. It also calculates all the statistical metrics.
 
